@@ -1,5 +1,4 @@
 import AIChatBot from '../../components/AIChatBot';
-// EmployeeLayout.jsx
 import { Outlet, NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { LayoutDashboard, BookOpen, Target, User, LogOut } from 'lucide-react';
@@ -53,12 +52,13 @@ export default function EmployeeLayout() {
           <div className="topbar-title">Xodim Portali</div>
           <div className="avatar" style={{ cursor: 'pointer' }}>{initials}</div>
         </header>
-        <main className="page-content"><Outlet /></main>
-      </div> {/* main-content yopilishi */}
+        <main className="page-content">
+          <Outlet />
+        </main>
+      </div>
 
-      {/* Chatbot xodimlar paneli uchun ham muvaffaqiyatli qo'shildi */}
       <AIChatBot role={user?.role} userName={user?.fullName} />
 
-    </div> {/* app-layout yopilishi */}
+    </div>
   );
-} // <-- Yetishmayotgan funksiyani yopuvchi qavs shu yerga qo'yildi!
+}
