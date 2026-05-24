@@ -1,3 +1,5 @@
+// 1-qator — import qo'shing:
+import AIChatBot from '../../components/AIChatBot';
 import { Outlet, NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { useState, useEffect } from 'react';
@@ -34,7 +36,7 @@ export default function HRLayout() {
 
   const initials = user?.fullName?.split(' ').map(n => n[0]).join('').slice(0,2).toUpperCase() || 'HR';
 
-  return (
+ return (
     <div className="app-layout">
       {/* Sidebar */}
       <aside className="sidebar">
@@ -116,6 +118,9 @@ export default function HRLayout() {
           <Outlet />
         </main>
       </div>
+
+      {/* Chatbot strukturani buzmasligi uchun asosiy content'dan tashqariga qo'yildi */}
+      <AIChatBot role={user?.role} userName={user?.fullName} />
+
     </div>
   );
-}
