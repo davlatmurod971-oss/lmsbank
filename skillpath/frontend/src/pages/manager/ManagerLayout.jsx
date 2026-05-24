@@ -1,4 +1,3 @@
-// Yuqoriga import:
 import AIChatBot from '../../components/AIChatBot';
 // ManagerLayout.jsx
 import { Outlet, NavLink, useNavigate } from 'react-router-dom';
@@ -17,7 +16,7 @@ export default function ManagerLayout() {
   const navigate = useNavigate();
   const initials = user?.fullName?.split(' ').map(n => n[0]).join('').slice(0,2).toUpperCase() || 'MG';
 
- return (
+  return (
     <div className="app-layout">
       {/* Sidebar */}
       <aside className="sidebar">
@@ -64,3 +63,4 @@ export default function ManagerLayout() {
 
     </div> {/* app-layout yopilishi */}
   );
+} // <-- Qolib ketgan yopuvchi qavs shu yerga qo'shildi!
