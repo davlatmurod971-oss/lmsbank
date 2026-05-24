@@ -91,7 +91,6 @@ export default function HRLayout() {
 
       {/* Main */}
       <div className="main-content">
-        {/* Topbar */}
         <header className="topbar">
           <div>
             <div className="topbar-title">HR Boshqaruv Paneli</div>
@@ -118,9 +117,8 @@ export default function HRLayout() {
         </main>
       </div>
 
-      {/* Chatbot strukturani buzmasligi uchun asosiy content'dan tashqariga qo'yildi */}
       <AIChatBot role={user?.role} userName={user?.fullName} />
 
     </div>
   );
-} // <-- Xatolikni tuzatgan yopiluvchi qavs shu yerda!
+}
