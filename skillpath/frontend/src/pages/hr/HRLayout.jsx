@@ -1,4 +1,3 @@
-// 1-qator — import qo'shing:
 import AIChatBot from '../../components/AIChatBot';
 import { Outlet, NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
@@ -36,7 +35,7 @@ export default function HRLayout() {
 
   const initials = user?.fullName?.split(' ').map(n => n[0]).join('').slice(0,2).toUpperCase() || 'HR';
 
- return (
+  return (
     <div className="app-layout">
       {/* Sidebar */}
       <aside className="sidebar">
@@ -124,3 +123,4 @@ export default function HRLayout() {
 
     </div>
   );
+} // <-- Xatolikni tuzatgan yopiluvchi qavs shu yerda!
