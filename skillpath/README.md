@@ -277,3 +277,6 @@ skillpath/
 ### Build xatosi Netlify'da?
 - `VITE_API_URL` environment variable qo'shilganmi?
 - `netlify.toml` fayl `dist` papkasida bormi?
+## ⚠️ Loyihadagi joriy cheklovlar (Known Issues)
+
+* **SkillPath AI Chatbot:** Chatbot interfeysi tizimga muvaffaqiyatli integratsiya qilindi, biroq hozirda API ulanishlari va backend sozlamalari ustida ish bormoqda. Shu sababli chatbot hozircha xabarlarga to'liq javob bera olmasligi yoki "Kechirasiz, javob bera olmadim" xatoligini qaytarishi mumkin. Tez orada sun'iy intellekt modeli to'liq rejimda ishga tushiriladi.
