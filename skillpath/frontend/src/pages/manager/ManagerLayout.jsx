@@ -55,12 +55,14 @@ export default function ManagerLayout() {
           <div className="topbar-title">Manager Paneli</div>
           <div className="avatar" style={{ cursor: 'pointer' }}>{initials}</div>
         </header>
-        <main className="page-content"><Outlet /></main>
+        <main className="page-content">
+          <Outlet />
+        </main>
       </div> {/* main-content yopilishi */}
 
-      {/* Chatbot shu yerga xavfsiz joylashtirildi */}
+      {/* Chatbot strukturadan tashqarida, lekin layout ichida */}
       <AIChatBot role={user?.role} userName={user?.fullName} />
 
-    </div> {/* app-layout yopilishi */}
+    </div>
   );
-} // <-- Qolib ketgan yopuvchi qavs shu yerga qo'shildi!
+}
