@@ -2,9 +2,9 @@
 
 ## Tizim haqida
 SkillPath — bank xodimlari uchun to'liq HR/LMS tizimi:
-- **HR Manager**: Xodimlar, career tracklar, traininglar, promotion boshqaruvi
-- **Branch Manager**: Jamoa, feedback, promotion tavsiyalari
-- **Xodim**: O'quv yo'li, traininglar, profil
+- **HR Manager**: Xodimlar, career tracklar, traininglar, promotion boshqaruvi,AI chatbot
+- **Branch Manager**: Jamoa, feedback, promotion tavsiyalari,AI chatbot
+- **Xodim**: O'quv yo'li, traininglar, profil,AI chatbot
 
 ---
 
