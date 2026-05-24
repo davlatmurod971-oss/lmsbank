@@ -16,7 +16,7 @@ export default function EmployeeLayout() {
   const navigate = useNavigate();
   const initials = user?.fullName?.split(' ').map(n => n[0]).join('').slice(0,2).toUpperCase() || 'EP';
 
-return (
+  return (
     <div className="app-layout">
       {/* Sidebar */}
       <aside className="sidebar">
@@ -61,3 +61,4 @@ return (
 
     </div> {/* app-layout yopilishi */}
   );
+} // <-- Yetishmayotgan funksiyani yopuvchi qavs shu yerga qo'yildi!
