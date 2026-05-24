@@ -1,3 +1,4 @@
+import AIChatBot from '../../components/AIChatBot';
 // EmployeeLayout.jsx
 import { Outlet, NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
@@ -15,8 +16,9 @@ export default function EmployeeLayout() {
   const navigate = useNavigate();
   const initials = user?.fullName?.split(' ').map(n => n[0]).join('').slice(0,2).toUpperCase() || 'EP';
 
-  return (
+return (
     <div className="app-layout">
+      {/* Sidebar */}
       <aside className="sidebar">
         <div className="sidebar-logo">
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 4 }}>
@@ -44,13 +46,18 @@ export default function EmployeeLayout() {
           </div>
         </div>
       </aside>
+
+      {/* Main */}
       <div className="main-content">
         <header className="topbar">
           <div className="topbar-title">Xodim Portali</div>
           <div className="avatar" style={{ cursor: 'pointer' }}>{initials}</div>
         </header>
         <main className="page-content"><Outlet /></main>
-      </div>
-    </div>
+      </div> {/* main-content yopilishi */}
+
+      {/* Chatbot xodimlar paneli uchun ham muvaffaqiyatli qo'shildi */}
+      <AIChatBot role={user?.role} userName={user?.fullName} />
+
+    </div> {/* app-layout yopilishi */}
   );
-}
